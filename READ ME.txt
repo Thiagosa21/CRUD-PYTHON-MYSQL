@@ -1,7 +1,0 @@
-Sistema simples de cadastro de clientes com Python e MySQL.
-
-Funcionalidades:
-- Cadastrar cliente
-- Listar clientes
-- Atualizar cliente
-- Deletar cliente
