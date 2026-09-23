@@ -1,8 +1,6 @@
 import mysql.connector
 
-# =========================
 # CONEXÃO COM O BANCO
-# =========================
 conexao = mysql.connector.connect(
     host='localhost',
     user='root',
@@ -12,9 +10,7 @@ conexao = mysql.connector.connect(
 
 cursor = conexao.cursor()
 
-# =========================
 # CRIAÇÃO DA TABELA
-# =========================
 tabela_cadastro = 'cliente_cadastrado'
 
 comando = f"""
@@ -26,9 +22,7 @@ CREATE TABLE IF NOT EXISTS {tabela_cadastro} (
 cursor.execute(comando)
 conexao.commit()
 
-# =========================
 # LOOP PRINCIPAL
-# =========================
 resposta = -1
 
 while resposta != 0:
@@ -46,9 +40,7 @@ while resposta != 0:
         print("Entrada inválida! Digite um número.")
         continue
 
-    # =========================
     # 1 - CADASTRAR
-    # =========================
     if resposta == 1:
         nome = input("Digite o nome: ").strip()
 
@@ -62,9 +54,7 @@ while resposta != 0:
             conexao.commit()
             print("Cliente cadastrado com sucesso!")
 
-    # =========================
     # 2 - LISTAR
-    # =========================
     elif resposta == 2:
         comando = f"SELECT * FROM {tabela_cadastro} ORDER BY nome"
         cursor.execute(comando)
@@ -83,9 +73,7 @@ while resposta != 0:
 
             print(f"Total de clientes: {total}")
 
-    # =========================
     # 3 - DELETAR
-    # =========================
     elif resposta == 3:
         try:
             id_cliente = int(input("Digite o ID do cliente que deseja excluir: "))
@@ -103,9 +91,7 @@ while resposta != 0:
         else:
             print("Cliente deletado com sucesso!")
 
-    # =========================
     # 4 - ATUALIZAR
-    # =========================
     elif resposta == 4:
         try:
             id_cliente = int(input("Digite o ID do cliente: "))
@@ -128,9 +114,7 @@ while resposta != 0:
         else:
             print("Cliente atualizado com sucesso!")
 
-    # =========================
     # 0 - SAIR
-    # =========================
     elif resposta == 0:
         print("Programa encerrado!")
 
