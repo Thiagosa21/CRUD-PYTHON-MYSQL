@@ -30,7 +30,3 @@ O sistema implementa um **CRUD** completo:
 * Ter o **Python** instalado na sua máquina.
 * Ter um servidor **MySQL** rodando localmente (ex: XAMPP, MySQL Workbench ou Docker).
 
-### 1. Clonar o repositório
-```bash
-git clone [https://github.com/SEU_USUARIO/nome-do-repositorio.git](https://github.com/thiagosa-dev/python-mysql-crud.git)
-cd nome-do-repositorio
