@@ -32,5 +32,5 @@ O sistema implementa um **CRUD** completo:
 
 ### 1. Clonar o repositório
 ```bash
-git clone [https://github.com/SEU_USUARIO/nome-do-repositorio.git](https://github.com/SEU_USUARIO/nome-do-repositorio.git)
+git clone [https://github.com/SEU_USUARIO/nome-do-repositorio.git](https://github.com/thiagosa-dev/python-mysql-crud.git)
 cd nome-do-repositorio
